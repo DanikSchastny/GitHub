@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 			if (number <= 0) cout << "Your number is to small. Try again:" << endl;
 			else break;
 		}
-		changingStr(str, substr, number);
+		changingStr(str, substr, number);  // Cuts the string. Why?
 
 		cout << str;
 
@@ -33,5 +33,6 @@ int main(int argc, char *argv[])
 	system("pause");
 	return 0;
 }
+
 
 
