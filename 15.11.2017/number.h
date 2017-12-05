@@ -1,5 +1,6 @@
-using namespace std;
+
 #pragma once
+using namespace std;
 
 int addingInt();
 void swap(int *a, int *b);
@@ -28,4 +29,3 @@ void equalResult(int a)
 
 	else cout << "They are equal";
 }
-

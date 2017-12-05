@@ -2,9 +2,6 @@
 
 void addingFullingArray(int n, int *arr);
 void sortingRE(int n, int *arr);
-void showingArray(int n, int *arr);
-
-
 void showingArray(int n, int *arr)
 {
 	for (int i = 0; i < n; ++i) cout << arr[i] << " ";
