@@ -1,12 +1,24 @@
 #pragma once
-using namespace std; 
+using namespace std;
 
 int lengthStr(char *a);
+
 int equalTest(char *a, char *b);
+
 void equalOrderTest(char *a, char *b);
-void resSubstringEnterence(int k,char *a);
+
+void resSubstringEnterence(int k, char *a);
+
 bool checkForSymb(char a);
+
 void changingStr(char* a, char* b, int m);
+
+void substrSubstitution(char *str, char *substr, int lnth);
+
+void transferToNext(char *str, int position);
+
+void transferToBack(char *str, int position);
+
 
 
 
@@ -47,7 +59,7 @@ bool checkForSymb(char a)
 
 void resSubstringEnterence(int k, char *a)
 {
-	
+
 	if (k + 1 >  lengthStr(a))
 	{
 		cout << k + 1 << " " << lengthStr(a) << endl;
@@ -98,5 +110,104 @@ int equalTest(char *a, char *b)
 		return k;
 	}
 	else return 10;
+}
+
+
+void substrSubstitution(char *str, char *substr, int lnth)
+{
+	int j = 0, f = 0, g = 0, substrlnth;
+	for (int i = 0; i < lengthStr(str); ++i)
+	{
+
+		j = 0;
+		substrlnth = lengthStr(substr);
+		if (checkForSymb(str[i]))
+		{
+			cout << i << endl;
+			f = i;
+			while (checkForSymb(str[f]))
+			{
+				++f;
+				++g;
+				cout << g << endl;
+			}
+		}
+
+
+		if (g == lnth && !checkForSymb(str[i - 1]))
+		{
+
+			while (substrlnth)
+			{
+
+				if (checkForSymb(str[i]))
+				{
+					if (checkForSymb(substr[j]))
+					{
+						str[i] = substr[j];
+					}
+					else
+					{
+
+						while (checkForSymb(str[i]))
+						{
+							transferToBack(str, i);
+
+
+
+						}
+					}
+				}
+				else
+				{
+					if (checkForSymb(str[i]))
+					{
+						transferToNext(str, i);
+
+						str[i] = substr[j];
+					}
+
+					else
+					{
+
+					}
+				}
+				++j;
+				++i;
+				substrlnth--;
+			}
+
+			while (checkForSymb(str[i]))
+			{
+				transferToBack(str, i);
+			}
+		}
+		f = 0;
+		g = 0;
+
+		j = 0;
+	}
+
+}
+
+void transferToNext(char *str, int position)
+{
+	int size = lengthStr(str);
+	for (size; size >= position; --size)
+	{
+		str[size + 1] = str[size];
+
+	}
+
+}
+
+void transferToBack(char *str, int position)
+{
+
+	int size = position;
+	for (size; size <= lengthStr(str); ++size)
+	{
+		str[size] = str[size + 1];
+	}
 }
 
