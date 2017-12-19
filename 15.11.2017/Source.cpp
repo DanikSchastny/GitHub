@@ -1,38 +1,35 @@
 #include<iostream>
 #include"mstring.h"
-#include"number.h"
+
 
 using namespace std;
 
-
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-	
-	
-	char str[256], substr[256];
-	
-		cout << "Enter the 1st string:" << endl;
-		cin.getline(str, 256);
-		cout << "Enter the substring:" << endl;
-		cin.getline(substr, 256);
-		
-		int number;
-		while (true)
-		{
-			cout << "Enter the number of symbols in the word:" << endl;
-			cin >> number;
+	char str[256];
 
-			if (number <= 0) cout << "Your number is to small. Try again:" << endl;
-			else break;
-		}
-		changingStr(str, substr, number);  // Cuts the string. Why?
+	cout << "Enter your string:" << endl;
+	cin.getline(str, 256);
 
-		cout << str;
+	char substr[256];
 
-	
+	cout << "Enter the substring:" << endl;
+	cin.getline(substr, 256);
+
+	int length;
+
+	cout << "Enter the length of substrings, that you want to change:" << endl;
+	cin >> length;
+
+	substrSubstitution(str, substr, length);
+
+	cout << str << endl;
+
 	system("pause");
 	return 0;
 }
+
+
 
 
 
