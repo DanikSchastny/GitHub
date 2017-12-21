@@ -30,6 +30,13 @@ int coloumnSum(int matrix[][N], int row, int column, int number);
 
 void columnSwap(int matrix[][N], int row, int column, int posA, int posB);
 
+void waningRowsChanging(int matrix[][N], int row, int column);
+
+void rowSwap(int matrix[][N], int row, int column, int posA, int posB);
+
+int rowSum(int matrix[][N], int row, int column, int position);
+
+
 void matrixRandomEnterence(int matrix[][N], int row, int column)
 {
 
