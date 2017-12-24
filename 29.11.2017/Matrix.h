@@ -1,7 +1,5 @@
 #pragma once
 
-#pragma once
-
 #define N 100
 
 using namespace std;
