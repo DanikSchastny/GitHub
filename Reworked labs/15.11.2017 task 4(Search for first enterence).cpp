@@ -60,15 +60,11 @@ int searchFirstEnt(char *str, char *subStr)
 bool stringComparison(char *str, char *subStr, int position)
 {
 	int length = lengthStr(subStr);
-	cout << length << endl;
-
-	cout << position << endl;
-
+	
 	for (int i = 0; i < position + length; ++i)
 	{
 		if (str[i + position] != subStr[i])
 		{
-			cout << str[i + position] << "  " << subStr[i] << endl;
 			return false;
 		}
 	}
