@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 	char str[256];
-	cout << "Enter your substring:" << endl;
+	cout << "Enter your string:" << endl;
 	cin.getline(str, 256);
 
 	char secStr[256];
