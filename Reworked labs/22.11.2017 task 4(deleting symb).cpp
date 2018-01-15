@@ -113,7 +113,6 @@ void deleteWord(char *str, int position, int length)
 	{
 		for (int i = position; i < position + length; ++i)
 			str[i] = str[i + 1];
-		cout << str<<endl;
 	}
 
 }
