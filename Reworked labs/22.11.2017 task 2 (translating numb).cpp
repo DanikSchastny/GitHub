@@ -29,8 +29,6 @@ int main()
 
 	translating(numb, number, p);
 
-	cout << numb;
-
 	system("pause");
 	return 0;
 }
