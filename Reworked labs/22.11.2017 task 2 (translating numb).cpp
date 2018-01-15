@@ -28,6 +28,8 @@ int main()
 	char numb[256];
 
 	translating(numb, number, p);
+	
+	cout<<numb<<endl;
 
 	system("pause");
 	return 0;
