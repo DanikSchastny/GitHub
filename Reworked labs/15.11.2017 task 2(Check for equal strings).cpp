@@ -59,7 +59,6 @@ bool checkingForEqual(char *str, char *secStr)
 	{
 		if (str[i] != secStr[i])
 		{
-			cout << '+' << endl;
 			if (!checkForEqualLetters(str[i], secStr[i]))
 			{
 				return false;
