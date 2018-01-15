@@ -59,7 +59,6 @@ int enteringLength(char *str)
 		cout << "Enter the length of words, that you want to replace" << endl;
 		cin >> length;
 
-		cout << length << ' ' << lengthStr(str) << endl;
 		if (length > 0 && length <= lengthStr(str))
 			break;
 	}
@@ -76,7 +75,6 @@ void wordsReplacement(char *str, char *subStr, int length)
 		{
 			if (checkingTheSize(str, i, length, substrLength))
 			{
-				cout << i << endl;
 				wordsSwap(str, subStr, i);
 				i += substrLength;
 			}
