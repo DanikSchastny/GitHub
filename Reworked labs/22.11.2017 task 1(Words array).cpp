@@ -80,8 +80,6 @@ void creatingWords(char words[256][256], char *str, int &jump, int &number, int 
 		words[number][j] = str[i];
 		++j;
 		++i;
-
-		cout << '+' << endl;
 	}
 
 	number += 1;
